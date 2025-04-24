@@ -6,24 +6,25 @@
   <title>Hawazin Azeenath Nisha A S - Portfolio</title>
   <style>
     :root {
-      --main-bg: #fdf6f0;
+      --bg: #fdf6f0;
       --accent: #ffe6ea;
       --highlight: #ffc0cb;
-      --text-color: #333;
-      --purple: #9b59b6;
-      --shadow: rgba(0,0,0,0.1);
+      --text: #333;
+      --main: #9b59b6;
+      --soft: rgba(0, 0, 0, 0.05);
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
       scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--main-bg);
-      color: var(--text-color);
+      background-color: var(--bg);
+      color: var(--text);
     }
 
     #navbar {
@@ -31,11 +32,10 @@
       top: 0;
       width: 100%;
       background-color: var(--accent);
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-      z-index: 10;
-      box-shadow: 0 2px 8px var(--shadow);
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: 0 2px 8px var(--soft);
+      z-index: 100;
     }
 
     #navbar a {
@@ -46,11 +46,10 @@
     }
 
     header#welcome-section {
-      padding-top: 100px;
-      text-align: center;
-      background-color: var(--accent);
-      padding-bottom: 4rem;
       min-height: 100vh;
+      padding: 7rem 1rem 3rem;
+      background: var(--accent);
+      text-align: center;
     }
 
     header h1 {
@@ -59,63 +58,60 @@
     }
 
     header p {
-      font-size: 1.2rem;
-      max-width: 600px;
+      max-width: 700px;
       margin: 1rem auto 0;
+      font-size: 1.1rem;
     }
 
     section {
-      padding: 4rem 1rem;
       max-width: 900px;
       margin: auto;
+      padding: 3rem 1rem;
     }
 
-    h2 {
-      color: var(--purple);
+    section h2 {
+      color: var(--main);
       border-bottom: 2px solid #dcd6f7;
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
-    ul {
-      list-style-type: none;
+    ul, .project-tile {
+      list-style: none;
       padding: 0;
     }
 
     li, .project-tile {
-      background-color: #f9eefc;
+      background: #f9eefc;
       margin: 10px 0;
       padding: 1rem;
       border-radius: 12px;
-      box-shadow: 0 2px 6px var(--shadow);
+      box-shadow: 0 2px 5px var(--soft);
     }
 
-    .project-tile a {
+    a {
+      color: var(--main);
       text-decoration: none;
-      color: var(--purple);
     }
 
-    #projects a {
-      display: block;
-      margin-top: 0.5rem;
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
+      background: var(--accent);
       text-align: center;
       padding: 1rem;
-      background-color: var(--accent);
       border-top: 2px solid var(--highlight);
     }
 
-    a#profile-link {
+    #profile-link {
       color: #6c63ff;
-      text-decoration: none;
     }
 
-    /* Media Query */
     @media (max-width: 600px) {
       #navbar {
         flex-direction: column;
-        align-items: center;
       }
       header h1 {
         font-size: 2rem;
@@ -125,16 +121,18 @@
 </head>
 <body>
 
+  <!-- ✅ FCC Requirement 7 & 8: Navbar with internal links -->
   <nav id="navbar">
     <a href="#welcome-section">Welcome</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- ✅ FCC Requirement 1–3: Welcome section with h1 -->
   <header id="welcome-section">
     <h1>Hawazin Azeenath Nisha A S</h1>
     <p>
-      B.Tech Computer Science and Business Systems (CSBS) student with a dream of building a future in the fields I love. Certified in Responsive Web Design, Data Analysis with Python, and Machine Learning via FreeCodeCamp. I also enjoy quiz programs and paper presentations.
+      B.Tech Computer Science and Business Systems (CSBS) student, passionate about building a career in the fields I love. Certified in Responsive Web Design, Data Analysis with Python, and Machine Learning (FreeCodeCamp). I actively participate in paper presentations and quiz programs across colleges.
     </p>
   </header>
 
@@ -148,12 +146,37 @@
     </ul>
   </section>
 
+  <!-- ✅ FCC Requirement 4–6: Projects section with class="project-tile" and at least one link -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-tile">
-      <strong>ML Project</strong> – Applied data analysis and model evaluation using real-world data.
-      <a href="#" target="_blank">Project Link (Coming Soon)</a>
+      <strong>Machine Learning Project</strong><br>
+      Applied ML on real-world dataset with data preprocessing, model evaluation, and visualization.
+      <br><a href="#" target="_blank">Project Link (Coming Soon)</a>
     </div>
+    <div class="project-tile">
+      <strong>Startup Concept: AI-Powered Neonatal Monitoring</strong><br>
+      Designing non-contact AI-based vitals tracking for newborns—blending innovation and compassion.
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>Responsive Web Design – FreeCodeCamp</li>
+      <li>Data Analysis with Python – FreeCodeCamp</li>
+      <li>Machine Learning with Python – FreeCodeCamp</li>
+      <li>Data Visualization – CAP Certification</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>ML Intern – Nezuware</strong> (Aug 2024)<br>
+        One-month internship focused on ML implementation and exploratory data analysis.
+      </li>
+    </ul>
   </section>
 
   <section>
@@ -161,21 +184,18 @@
     <p>3rd Year, B.Tech Computer Science and Business Systems (CSBS)</p>
   </section>
 
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>ML Intern at Nezuware</strong> – Aug 2024  
-      Implemented ML solutions and did EDA during a 1-month internship.</li>
-    </ul>
-  </section>
-
+  <!-- ✅ FCC Requirement 9, 10: profile-link with _blank -->
+  <!-- ✅ LinkedIn & GitHub links -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a id="profile-link" href="mailto:hawazinsafeek@gmail.com" target="_blank">hawazinsafeek@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/your-linkedin-id" target="_blank">linkedin.com/in/your-linkedin-id</a></p>
+    <p>GitHub: <a href="https://github.com/your-github-id" target="_blank">github.com/your-github-id</a></p>
   </section>
 
   <footer>
     &copy; 2025 Hawazin Azeenath Nisha A S — All rights reserved.
   </footer>
+
 </body>
 </html>
