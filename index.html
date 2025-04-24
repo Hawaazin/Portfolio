@@ -6,262 +6,155 @@
   <title>Hawazin Azeenath Nisha A S - Portfolio</title>
   <style>
     :root {
-      --bg: #fdf6f0;
-      --accent: #ffe6ea;
-      --highlight: #ffc0cb;
+      --main-bg: #fdf6f0;
+      --accent: #a8dadc;
+      --dark: #1d3557;
+      --soft: #f1faee;
       --text: #333;
-      --main: #9b59b6;
-      --soft: rgba(0, 0, 0, 0.05);
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
+      background-color: var(--main-bg);
       color: var(--text);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     #navbar {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: var(--accent);
-      padding: 0.6rem 0;
-      text-align: center;
-      box-shadow: 0 2px 5px var(--soft);
+      background: var(--accent);
+      display: flex;
+      justify-content: space-around;
+      padding: 0.8rem 0;
       z-index: 1000;
     }
 
     #navbar a {
-      margin: 0 0.75rem;
+      color: var(--dark);
       text-decoration: none;
-      color: var(--main);
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    header#welcome-section {
-      min-height: 100vh;
-      padding: 6rem 1rem 2rem;
-      background: var(--accent);
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.4rem;
-      color: #d6336c;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      max-width: 800px;
-      margin: 0.5rem auto;
-      font-size: 1rem;
-    }
-
-    header ul {
-      list-style: none;
-      padding: 0;
-      margin: 0.5rem auto;
-      max-width: 500px;
-    }
-
-    header ul li {
-      padding: 0.3rem 0;
+      font-weight: bold;
     }
 
     section {
-      max-width: 880px;
+      padding: 4rem 2rem;
+      max-width: 1000px;
       margin: auto;
-      padding: 2rem 1rem 1.5rem;
     }
 
-    section h2 {
-      color: var(--main);
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid var(--highlight);
-      display: inline-block;
+    #welcome-section {
+      height: 100vh;
+      background: var(--soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
-    ul, .project-tile {
-      list-style: none;
-      padding: 0;
+    #welcome-section h1 {
+      font-size: 2.8rem;
+      color: var(--dark);
     }
 
-    li, .project-tile {
-      background: #f9eefc;
-      margin-bottom: 10px;
-      padding: 0.7rem 1rem;
-      border-radius: 10px;
-      box-shadow: 0 1px 3px var(--soft);
+    #welcome-section p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
     }
 
-    a {
-      color: var(--main);
+    #projects {
+      background: var(--soft);
+    }
+
+    .project-tile {
+      margin: 1rem 0;
+      padding: 1rem;
+      border-left: 4px solid var(--accent);
+      background: white;
+    }
+
+    #contact {
+      background: var(--accent);
+      color: var(--dark);
+      text-align: center;
+    }
+
+    #contact a {
+      color: var(--dark);
+      margin: 0 1rem;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background: var(--accent);
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      border-top: 2px solid var(--highlight);
-      margin-top: 2rem;
-    }
-
-    #profile-link {
-      color: #6c63ff;
-    }
-
-    @media (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       #navbar {
-        font-size: 0.85rem;
+        flex-direction: column;
       }
 
-      header h1 {
+      #welcome-section h1 {
         font-size: 2rem;
-      }
-
-      header p {
-        font-size: 0.95rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
   <nav id="navbar">
-    <a href="#welcome-section">Welcome</a>
+    <a href="#welcome-section">Home</a>
     <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
+    <a href="#achievements">Achievements</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Welcome -->
-  <header id="welcome-section">
-    <h1>Hawazin Azeenath Nisha A S</h1>
-    <p>👋 Hello! I'm a passionate B.Tech Computer Science and Business Systems student with a dream of crafting solutions that combine logic, empathy, and elegance.</p>
-    <p>I’ve always been drawn toward creative technology — whether it's building intuitive websites, analyzing data to tell meaningful stories, or designing machine learning models that make a difference.</p>
-    <p>🌟 Highlights:</p>
-    <ul>
-      <li>🎓 Third-year student with hands-on project work in AI & Web</li>
-      <li>🏆 Participated in national-level quizzes & symposiums</li>
-      <li>🧠 Developed a startup concept for non-contact neonatal monitoring</li>
-      <li>🌱 Certified by FreeCodeCamp in ML, Data Analysis & Web Design</li>
-    </ul>
-    <p>✨ My mission is simple: Build things that help people. Whether it's a sleek website or a smart model, I want my work to bring value, spark curiosity, and solve problems that matter.</p>
-  </header>
+  <section id="welcome-section">
+    <h1>Hey, I'm Hawazin Azeenath Nisha A S</h1>
+    <p>Aspiring professional passionate about Web Development, Data Science & AI.</p>
+    <p>B.Tech in Computer Science and Business Systems | Bright academic performer | Certified & Award-winning learner</p>
+  </section>
 
-  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-tile">
-      <strong>📊 Machine Learning with Python</strong>
-      <ul>
-        <li>Used Scikit-learn, Pandas, Matplotlib to build predictive models</li>
-        <li>Explored regression, classification, and clustering problems</li>
-      </ul>
+      <h3>Credit Card Fraud Detection</h3>
+      <p>Used machine learning algorithms in Python to detect fraudulent credit card transactions. Built as part of internship at Nezuware.</p>
     </div>
     <div class="project-tile">
-      <strong>👶 AI Neonatal Monitoring (Startup Concept)</strong>
-      <ul>
-        <li>Non-contact vital signs monitoring system for NICU using AI + CV</li>
-        <li>Emphasizes infant safety with real-time anomaly detection</li>
-      </ul>
-    </div>
-    <div class="project-tile">
-      <strong>🌐 Responsive Web Design Portfolio</strong>
-      <ul>
-        <li>Built 10+ responsive HTML/CSS pages with accessible layout</li>
-        <li>Focused on pastel themes, clean UI/UX, and mobile-friendliness</li>
-      </ul>
+      <h3>Heart Disease Detection</h3>
+      <p>Built a prediction model to classify potential heart patients using healthcare data. Developed during Nezuware internship.</p>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
+  <section id="achievements">
+    <h2>Achievements & Certifications</h2>
     <ul>
-      <li>💻 HTML5, CSS3 – Proficient in web layouts & styling</li>
-      <li>📈 Python – Data analysis, visualization (Pandas, Matplotlib)</li>
-      <li>🧠 Machine Learning – Scikit-learn, Regression, Clustering</li>
-      <li>🎨 UI/UX – Pastel aesthetic, clean, user-centered design</li>
-      <li>🧩 Problem Solving – Hackathons, quizzes, symposiums</li>
+      <li>Completed certifications in Responsive Web Design, Data Analysis with Python, and ML with Python from FreeCodeCamp (5 projects each).</li>
+      <li>ML Intern at Nezuware - Completed two real-world projects using GitHub and Python.</li>
+      <li>Quiz certifications from MyGov, ICAI, and Nezuware (Data Structures and Algorithms).</li>
+      <li>Paper Presentation on Cybersecurity at Mount Zion College, Pudukottai.</li>
+      <li>GUVI SAWITAI Challenge, Cisco Certifications, Infosys Springboard Certifications, and TechMahindra Cybersecurity Certification.</li>
+      <li>Organizer of ChefWar 25 and Quizohilic 25; MC and Editor of TechChandler CSBS Club and College Women's Day event.</li>
+      <li>Masterclasses and webinars on AI, PowerBI, SQL, Coding, and more from industry leaders.</li>
+      <li>Top ranks in Project Expo, Short Film Competition, and Logo & Tagline Quiz.</li>
+      <li>Creative in Graphic Design using Adobe Illustrator, proficient in MS Office Suite, Poster/PPT/Logo making.</li>
+      <li>Bright and consistent performer throughout school with strong academic background.</li>
     </ul>
   </section>
 
-  <!-- Certifications -->
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>FreeCodeCamp – Responsive Web Design</li>
-      <li>FreeCodeCamp – Data Analysis with Python</li>
-      <li>FreeCodeCamp – Machine Learning with Python</li>
-      <li>CAP – Data Visualization</li>
-    </ul>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <strong>🧪 ML Intern @ Nezuware (Aug 2024)</strong>
-        <ul>
-          <li>Helped in preparing datasets for model training</li>
-          <li>Worked on evaluating real-time model performance</li>
-          <li>Participated in team meetings and presented progress</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-
-  <!-- Education -->
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>B.Tech – Computer Science & Business Systems (3rd Year)</li>
-      <li>Principal: Dr. V. Nirmal Kannan</li>
-      <li>Actively participated in intercollegiate quizzes & symposiums</li>
-    </ul>
-  </section>
-
-  <!-- Contact -->
   <section id="contact">
-    <h2>Contact</h2>
-    <ul>
-      <li>Email: <a id="profile-link" href="mailto:hawazinsafeek@gmail.com" target="_blank">hawazinsafeek@gmail.com</a></li>
-      <li>LinkedIn: <a href="www.linkedin.com/in/hawazin-azeenath-nisha-8161ab295" target="_blank">www.linkedin.com/in/hawazin-azeenath-nisha-8161ab295d</a></li>
-      <li>GitHub: <a href="https://github.com/your-github-id" target="_blank">github.com/your-github-id</a></li>
-    </ul>
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:hawazinsafeek@gmail.com">hawazinsafeek@gmail.com</a></p>
+    <p>
+      <a id="profile-link" href="https://github.com/yourgithub" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+    </p>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Hawazin Azeenath Nisha A S — All rights reserved.
-  </footer>
-
 </body>
 </html>
 
-  </footer>
-
-</body>
-</html>
