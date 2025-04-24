@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hawazin Azeenath Nisha A S - Portfolio</title>
+  <title>Hawazin Azeenath Nisha A S | Portfolio</title>
   <style>
     :root {
-      --main-bg: #fdf6f0;
-      --accent: #a8dadc;
-      --dark: #1d3557;
+      --bg: #fdfaf6;
+      --primary: #a8dadc;
+      --secondary: #457b9d;
+      --text: #1d3557;
       --soft: #f1faee;
-      --text: #333;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--main-bg);
+      background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
@@ -30,71 +31,118 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: var(--accent);
+      background: var(--primary);
       display: flex;
       justify-content: space-around;
-      padding: 0.8rem 0;
+      align-items: center;
+      padding: 0.8rem;
       z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     #navbar a {
-      color: var(--dark);
       text-decoration: none;
-      font-weight: bold;
+      color: var(--text);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    #navbar a:hover {
+      color: var(--secondary);
     }
 
     section {
       padding: 4rem 2rem;
       max-width: 1000px;
-      margin: auto;
+      margin: 0 auto;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     #welcome-section {
       height: 100vh;
-      background: var(--soft);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      background: var(--soft);
     }
 
     #welcome-section h1 {
-      font-size: 2.8rem;
-      color: var(--dark);
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation-delay: 0.2s;
+    }
+
+    #welcome-section h3 {
+      font-size: 1.5rem;
+      color: var(--secondary);
+      animation-delay: 0.4s;
     }
 
     #welcome-section p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      animation-delay: 0.6s;
     }
 
-    #projects {
-      background: var(--soft);
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--secondary);
     }
 
     .project-tile {
       margin: 1rem 0;
       padding: 1rem;
-      border-left: 4px solid var(--accent);
       background: white;
+      border-left: 5px solid var(--primary);
+      transition: transform 0.3s ease;
+    }
+
+    .project-tile:hover {
+      transform: translateY(-5px);
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 1.2rem;
+    }
+
+    ul li {
+      margin-bottom: 1rem;
     }
 
     #contact {
-      background: var(--accent);
-      color: var(--dark);
+      background: var(--primary);
       text-align: center;
+      color: var(--text);
     }
 
     #contact a {
-      color: var(--dark);
-      margin: 0 1rem;
+      color: var(--text);
       text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
 
-    @media screen and (max-width: 768px) {
+    #contact a:hover {
+      color: var(--secondary);
+    }
+
+    @media (max-width: 768px) {
       #navbar {
         flex-direction: column;
+        padding: 1rem;
       }
 
       #welcome-section h1 {
@@ -113,36 +161,41 @@
   </nav>
 
   <section id="welcome-section">
-    <h1>Hey, I'm Hawazin Azeenath Nisha A S</h1>
-    <p>Aspiring professional passionate about Web Development, Data Science & AI.</p>
-    <p>B.Tech in Computer Science and Business Systems | Bright academic performer | Certified & Award-winning learner</p>
+    <h1>Hawazin Azeenath Nisha A S</h1>
+    <h3>B.Tech - Computer Science & Business Systems</h3>
+    <p>🚀 Aspiring Tech Enthusiast | Passionate Web Designer | Budding Data Scientist</p>
+    <p>📚 Consistent Performer | Quizzer | Paper Presenter | ML Intern at Nezuware</p>
+    <p>🎯 Interested in AI, Cybersecurity, Front-End Dev, Data Analytics, and Design</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-tile">
       <h3>Credit Card Fraud Detection</h3>
-      <p>Used machine learning algorithms in Python to detect fraudulent credit card transactions. Built as part of internship at Nezuware.</p>
+      <p>Used Python, Pandas, and Scikit-Learn to build a fraud detection model on real-time financial data during internship at Nezuware.</p>
     </div>
     <div class="project-tile">
-      <h3>Heart Disease Detection</h3>
-      <p>Built a prediction model to classify potential heart patients using healthcare data. Developed during Nezuware internship.</p>
+      <h3>Heart Disease Prediction</h3>
+      <p>Developed a ML-based health diagnostic tool using Python, based on patient datasets—part of a real-time internship task.</p>
     </div>
   </section>
 
   <section id="achievements">
     <h2>Achievements & Certifications</h2>
     <ul>
-      <li>Completed certifications in Responsive Web Design, Data Analysis with Python, and ML with Python from FreeCodeCamp (5 projects each).</li>
-      <li>ML Intern at Nezuware - Completed two real-world projects using GitHub and Python.</li>
-      <li>Quiz certifications from MyGov, ICAI, and Nezuware (Data Structures and Algorithms).</li>
-      <li>Paper Presentation on Cybersecurity at Mount Zion College, Pudukottai.</li>
-      <li>GUVI SAWITAI Challenge, Cisco Certifications, Infosys Springboard Certifications, and TechMahindra Cybersecurity Certification.</li>
-      <li>Organizer of ChefWar 25 and Quizohilic 25; MC and Editor of TechChandler CSBS Club and College Women's Day event.</li>
-      <li>Masterclasses and webinars on AI, PowerBI, SQL, Coding, and more from industry leaders.</li>
-      <li>Top ranks in Project Expo, Short Film Competition, and Logo & Tagline Quiz.</li>
-      <li>Creative in Graphic Design using Adobe Illustrator, proficient in MS Office Suite, Poster/PPT/Logo making.</li>
-      <li>Bright and consistent performer throughout school with strong academic background.</li>
+      <li>Certified in Responsive Web Design, Data Analysis with Python, ML with Python (FreeCodeCamp - 15+ Projects).</li>
+      <li>ML Intern at Nezuware (Aug 2024) – Worked on real-time projects using Python and GitHub.</li>
+      <li>Quiz Participant: Bharatiya Nyaya Sanhita, Vitiyagyan Mela, Nezuware DSA.</li>
+      <li>Presented paper on Cybersecurity at Mount Zion College (National Symposium).</li>
+      <li>GUVI SAWITAI Challenge, Data Visualization CAP (Infosys), TechMahindra Cybersecurity Certification.</li>
+      <li>Cisco: Data Analytics, Cybersecurity, Data Science | Infosys Springboard: Statistical Methods in DS.</li>
+      <li>Project Expo finalist (TechGium) for AI-powered Neonatal Vital Monitoring.</li>
+      <li>Awarded in 3 major events: NYK Expo (3rd), Film Contest (2nd), Logo Quiz (1st).</li>
+      <li>Organized college fests like ChefWar 25 (Cooking) and Quizohilic 25 (Quiz).</li>
+      <li>Active member, MC & Editor - TechChandler Club (CSBS) and Women’s Day Event.</li>
+      <li>Adobe Illustrator Course (Udemy), Power BI Masterclass (Domino's Dashboard).</li>
+      <li>Fluent in HTML, CSS, Graphic Design | Strong in PPTs, Logos, Posters, Microsoft Tools.</li>
+      <li>Academically strong and consistent high performer since school days.</li>
     </ul>
   </section>
 
@@ -150,7 +203,7 @@
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:hawazinsafeek@gmail.com">hawazinsafeek@gmail.com</a></p>
     <p>
-      <a id="profile-link" href="https://github.com/yourgithub" target="_blank">GitHub</a> |
+      <a id="profile-link" href="https://github.com/yourgithub" target="_blank">GitHub</a>
       <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
     </p>
   </section>
