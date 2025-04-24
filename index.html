@@ -1,160 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hawazin Azeenath Nisha A S | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawazin Azeenath Nisha A S - Portfolio</title>
   <style>
     :root {
-      --bg: #fdfaf6;
-      --primary: #a8dadc;
-      --secondary: #457b9d;
-      --text: #1d3557;
-      --soft: #f1faee;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+      --main-bg: #fdf6f0;
+      --accent: #c4adea;
+      --highlight: #9ad3bc;
+      --text: #333;
+      --soft: #fff;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--main-bg);
       color: var(--text);
-      line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     #navbar {
       position: fixed;
       top: 0;
       width: 100%;
-      background: var(--primary);
+      background-color: var(--soft);
+      padding: 10px 20px;
       display: flex;
       justify-content: space-around;
-      align-items: center;
-      padding: 0.8rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       z-index: 1000;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     #navbar a {
       text-decoration: none;
       color: var(--text);
-      font-weight: 600;
-      transition: color 0.3s ease;
+      padding: 10px;
+      transition: color 0.3s;
     }
 
     #navbar a:hover {
-      color: var(--secondary);
+      color: var(--accent);
     }
 
     section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-      opacity: 0;
-      animation: fadeIn 1.5s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+      padding: 80px 20px 40px;
+      min-height: 100vh;
     }
 
     #welcome-section {
-      height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
-      background: var(--soft);
+      background: linear-gradient(to bottom, var(--main-bg), var(--highlight));
+      animation: fadeIn 2s ease-in-out;
     }
 
     #welcome-section h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      animation-delay: 0.2s;
+      font-size: 3em;
+      margin-bottom: 10px;
     }
 
     #welcome-section h3 {
-      font-size: 1.5rem;
-      color: var(--secondary);
-      animation-delay: 0.4s;
+      font-weight: normal;
+      font-size: 1.5em;
+      color: #555;
     }
 
     #welcome-section p {
-      font-size: 1.1rem;
-      margin: 0.5rem 0;
-      animation-delay: 0.6s;
+      max-width: 800px;
+      font-size: 1.1em;
+      margin: 10px 0;
     }
 
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: var(--secondary);
+    #projects, #achievements, #contact {
+      background: var(--soft);
     }
 
     .project-tile {
-      margin: 1rem 0;
-      padding: 1rem;
-      background: white;
-      border-left: 5px solid var(--primary);
-      transition: transform 0.3s ease;
+      margin: 20px auto;
+      padding: 15px;
+      max-width: 700px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fffaf0;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
     }
 
-    .project-tile:hover {
-      transform: translateY(-5px);
-    }
-
-    ul {
-      list-style-type: square;
-      padding-left: 1.2rem;
-    }
-
-    ul li {
-      margin-bottom: 1rem;
-    }
-
-    #contact {
-      background: var(--primary);
+    footer {
       text-align: center;
-      color: var(--text);
+      padding: 20px;
+      font-size: 0.9em;
+      background: var(--highlight);
     }
 
-    #contact a {
-      color: var(--text);
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    #contact a:hover {
-      color: var(--secondary);
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 768px) {
-      #navbar {
-        flex-direction: column;
-        padding: 1rem;
-      }
-
-      #welcome-section h1 {
-        font-size: 2rem;
-      }
+      #welcome-section h1 { font-size: 2em; }
+      #welcome-section p { font-size: 1em; }
     }
   </style>
 </head>
 <body>
 
   <nav id="navbar">
-    <a href="#welcome-section">Home</a>
+    <a href="#welcome-section">Welcome</a>
     <a href="#projects">Projects</a>
     <a href="#achievements">Achievements</a>
     <a href="#contact">Contact</a>
@@ -162,51 +119,53 @@
 
   <section id="welcome-section">
     <h1>Hawazin Azeenath Nisha A S</h1>
-    <h3>B.Tech - Computer Science & Business Systems</h3>
-    <p>🚀 Aspiring Tech Enthusiast | Passionate Web Designer | Budding Data Scientist</p>
-    <p>📚 Consistent Performer | Quizzer | Paper Presenter | ML Intern at Nezuware</p>
-    <p>🎯 Interested in AI, Cybersecurity, Front-End Dev, Data Analytics, and Design</p>
+    <h3>CSBS | Web Designer | ML Enthusiast | Creative Thinker</h3>
+    <p>Welcome to my portfolio! I'm a passionate Computer Science and Business Systems student with a strong love for tech, design, and data.</p>
+    <p>I’ve completed certifications in Responsive Web Design, Data Analysis with Python, and Machine Learning with Python via FreeCodeCamp, each with 5 real-world projects.</p>
+    <p>With experience in Machine Learning (Nezuware Internship), graphic design, and event organizing, I bring creativity and discipline to everything I do.</p>
+    <p>Let’s build the future together. 🌟</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-tile">
       <h3>Credit Card Fraud Detection</h3>
-      <p>Used Python, Pandas, and Scikit-Learn to build a fraud detection model on real-time financial data during internship at Nezuware.</p>
+      <p>Developed during my ML Internship at Nezuware using Python & Scikit-learn.</p>
     </div>
     <div class="project-tile">
-      <h3>Heart Disease Prediction</h3>
-      <p>Developed a ML-based health diagnostic tool using Python, based on patient datasets—part of a real-time internship task.</p>
+      <h3>Heart Disease Detection</h3>
+      <p>Second ML internship project using Python. Analyzed health data for disease prediction.</p>
     </div>
   </section>
 
   <section id="achievements">
     <h2>Achievements & Certifications</h2>
     <ul>
-      <li>Certified in Responsive Web Design, Data Analysis with Python, ML with Python (FreeCodeCamp - 15+ Projects).</li>
-      <li>ML Intern at Nezuware (Aug 2024) – Worked on real-time projects using Python and GitHub.</li>
-      <li>Quiz Participant: Bharatiya Nyaya Sanhita, Vitiyagyan Mela, Nezuware DSA.</li>
-      <li>Presented paper on Cybersecurity at Mount Zion College (National Symposium).</li>
-      <li>GUVI SAWITAI Challenge, Data Visualization CAP (Infosys), TechMahindra Cybersecurity Certification.</li>
-      <li>Cisco: Data Analytics, Cybersecurity, Data Science | Infosys Springboard: Statistical Methods in DS.</li>
-      <li>Project Expo finalist (TechGium) for AI-powered Neonatal Vital Monitoring.</li>
-      <li>Awarded in 3 major events: NYK Expo (3rd), Film Contest (2nd), Logo Quiz (1st).</li>
-      <li>Organized college fests like ChefWar 25 (Cooking) and Quizohilic 25 (Quiz).</li>
-      <li>Active member, MC & Editor - TechChandler Club (CSBS) and Women’s Day Event.</li>
-      <li>Adobe Illustrator Course (Udemy), Power BI Masterclass (Domino's Dashboard).</li>
-      <li>Fluent in HTML, CSS, Graphic Design | Strong in PPTs, Logos, Posters, Microsoft Tools.</li>
-      <li>Academically strong and consistent high performer since school days.</li>
+      <li>Certified in Responsive Web Design, Data Analysis with Python, and Machine Learning (FreeCodeCamp).</li>
+      <li>ML Intern at Nezuware – built two real-world projects and qualified in DSA quiz.</li>
+      <li>Presented paper on "Ethical Issues in Cybersecurity" at National Symposium (Mount Zion Engineering).</li>
+      <li>Completed Adobe Illustrator Graphic Design Course (Udemy).</li>
+      <li>Completed Cisco certifications: Data Analytics, Cybersecurity, and Data Science.</li>
+      <li>Certified in Data Visualization (Infosys Springboard), Applied Math, and Cybersecurity (TechMahindra Foundation).</li>
+      <li>1st Prize in Logo & Tagline Quiz (Evoke 25 – Syed Ammal Engineering College).</li>
+      <li>2nd Prize in District Short Film Contest (Thiruvalluvar Silai Vellivizha).</li>
+      <li>3rd Prize in National Project Expo (Nehru Yuva Kendra – Team).</li>
+      <li>Organizer & MC for events like ChefWar 25, Quizohilic 25, and Women's Day at college.</li>
+      <li>AI-based Neonatal Vital Monitoring project – selected till Round 2 in TechGium Expo.</li>
+      <li>Attended 5-Day Masterclass (Novitech R&D) and webinars on SQL, Power BI, and study/work abroad.</li>
     </ul>
   </section>
 
   <section id="contact">
-    <h2>Contact Me</h2>
+    <h2>Contact</h2>
     <p>Email: <a href="mailto:hawazinsafeek@gmail.com">hawazinsafeek@gmail.com</a></p>
-    <p>
-      <a id="profile-link" href="https://github.com/yourgithub" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
-    </p>
+    <p>LinkedIn: <a id="profile-link" href="https://linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></p>
+    <p>GitHub: <a href="https://github.com/your-github" target="_blank">github.com/your-github</a></p>
   </section>
+
+  <footer>
+    <p>Made with 💖 by Hawazin Azeenath Nisha A S | B.Tech CSBS</p>
+  </footer>
 
 </body>
 </html>
