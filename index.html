@@ -32,22 +32,22 @@
       top: 0;
       width: 100%;
       background-color: var(--accent);
-      padding: 1rem 0;
+      padding: 0.75rem 0;
       text-align: center;
-      box-shadow: 0 2px 8px var(--soft);
-      z-index: 100;
+      box-shadow: 0 2px 5px var(--soft);
+      z-index: 1000;
     }
 
     #navbar a {
-      margin: 0 1rem;
+      margin: 0 0.75rem;
       text-decoration: none;
-      color: #d6336c;
-      font-weight: bold;
+      color: var(--main);
+      font-weight: 600;
     }
 
     header#welcome-section {
       min-height: 100vh;
-      padding: 7rem 1rem 3rem;
+      padding: 6rem 1rem 2rem;
       background: var(--accent);
       text-align: center;
     }
@@ -60,20 +60,21 @@
     header p {
       max-width: 700px;
       margin: 1rem auto 0;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     section {
       max-width: 900px;
       margin: auto;
-      padding: 3rem 1rem;
+      padding: 2rem 1rem;
     }
 
     section h2 {
       color: var(--main);
-      border-bottom: 2px solid #dcd6f7;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 2px solid var(--highlight);
+      display: inline-block;
     }
 
     ul, .project-tile {
@@ -83,10 +84,10 @@
 
     li, .project-tile {
       background: #f9eefc;
-      margin: 10px 0;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 5px var(--soft);
+      margin: 8px 0;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px var(--soft);
     }
 
     a {
@@ -101,7 +102,8 @@
     footer {
       background: var(--accent);
       text-align: center;
-      padding: 1rem;
+      padding: 0.8rem;
+      font-size: 0.9rem;
       border-top: 2px solid var(--highlight);
     }
 
@@ -111,8 +113,9 @@
 
     @media (max-width: 600px) {
       #navbar {
-        flex-direction: column;
+        font-size: 0.9rem;
       }
+
       header h1 {
         font-size: 2rem;
       }
@@ -121,46 +124,58 @@
 </head>
 <body>
 
-  <!-- ✅ FCC Requirement 7 & 8: Navbar with internal links -->
+  <!-- Navigation Bar -->
   <nav id="navbar">
     <a href="#welcome-section">Welcome</a>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- ✅ FCC Requirement 1–3: Welcome section with h1 -->
+  <!-- Welcome Section -->
   <header id="welcome-section">
     <h1>Hawazin Azeenath Nisha A S</h1>
     <p>
-      B.Tech Computer Science and Business Systems (CSBS) student, passionate about building a career in the fields I love. Certified in Responsive Web Design, Data Analysis with Python, and Machine Learning (FreeCodeCamp). I actively participate in paper presentations and quiz programs across colleges.
+      I'm a third-year B.Tech Computer Science and Business Systems student, with a vision to innovate through AI and web technologies. Passionate about solving real-world problems, I recently completed certifications in Web Design, Data Analysis, and Machine Learning. I'm actively engaged in academic events like quizzes and paper presentations and also working on an AI-powered neonatal monitoring startup idea.
     </p>
   </header>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>Machine Learning</li>
-      <li>HTML & CSS</li>
-      <li>Data Visualization</li>
-    </ul>
-  </section>
-
-  <!-- ✅ FCC Requirement 4–6: Projects section with class="project-tile" and at least one link -->
+  <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-tile">
-      <strong>Machine Learning Project</strong><br>
-      Applied ML on real-world dataset with data preprocessing, model evaluation, and visualization.
-      <br><a href="#" target="_blank">Project Link (Coming Soon)</a>
+      <strong>🧠 Machine Learning in Python</strong><br/>
+      Developed ML models to predict health parameters using Python libraries like Pandas, NumPy, and Scikit-Learn.<br/>
+      <a href="#" target="_blank">Project Link (Coming Soon)</a>
     </div>
     <div class="project-tile">
-      <strong>Startup Concept: AI-Powered Neonatal Monitoring</strong><br>
-      Designing non-contact AI-based vitals tracking for newborns—blending innovation and compassion.
+      <strong>💡 AI-powered Neonatal Vital Monitoring (Startup Idea)</strong><br/>
+      Building an innovative, non-contact system for real-time monitoring of newborns' vitals using AI and computer vision.
+    </div>
+    <div class="project-tile">
+      <strong>🌐 Responsive Web Design</strong><br/>
+      Created multiple responsive webpages using HTML and CSS as part of FreeCodeCamp coursework.
     </div>
   </section>
 
-  <section>
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python Programming</li>
+      <li>Machine Learning & Data Analysis</li>
+      <li>HTML & CSS</li>
+      <li>Data Visualization</li>
+      <li>Problem Solving</li>
+      <li>Team Collaboration & Communication</li>
+    </ul>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications">
     <h2>Certifications</h2>
     <ul>
       <li>Responsive Web Design – FreeCodeCamp</li>
@@ -170,22 +185,24 @@
     </ul>
   </section>
 
-  <section>
+  <!-- Experience Section -->
+  <section id="experience">
     <h2>Experience</h2>
     <ul>
-      <li><strong>ML Intern – Nezuware</strong> (Aug 2024)<br>
-        One-month internship focused on ML implementation and exploratory data analysis.
+      <li><strong>ML Intern – Nezuware</strong> (Aug 2024)<br/>
+        Contributed to data preprocessing, model evaluation, and documentation for machine learning models in real-time scenarios.
       </li>
     </ul>
   </section>
 
-  <section>
+  <!-- Education Section -->
+  <section id="education">
     <h2>Education</h2>
-    <p>3rd Year, B.Tech Computer Science and Business Systems (CSBS)</p>
+    <p>B.Tech in Computer Science and Business Systems – Third Year<br/>
+    Dr. V. Nirmal Kannan (Principal)</p>
   </section>
 
-  <!-- ✅ FCC Requirement 9, 10: profile-link with _blank -->
-  <!-- ✅ LinkedIn & GitHub links -->
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a id="profile-link" href="mailto:hawazinsafeek@gmail.com" target="_blank">hawazinsafeek@gmail.com</a></p>
@@ -193,6 +210,7 @@
     <p>GitHub: <a href="https://github.com/your-github-id" target="_blank">github.com/your-github-id</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Hawazin Azeenath Nisha A S — All rights reserved.
   </footer>
