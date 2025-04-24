@@ -1,1 +1,181 @@
-# Portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hawazin Azeenath Nisha A S - Portfolio</title>
+  <style>
+    :root {
+      --main-bg: #fdf6f0;
+      --accent: #ffe6ea;
+      --highlight: #ffc0cb;
+      --text-color: #333;
+      --purple: #9b59b6;
+      --shadow: rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--main-bg);
+      color: var(--text-color);
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--accent);
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      z-index: 10;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    #navbar a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #d6336c;
+      font-weight: bold;
+    }
+
+    header#welcome-section {
+      padding-top: 100px;
+      text-align: center;
+      background-color: var(--accent);
+      padding-bottom: 4rem;
+      min-height: 100vh;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #d6336c;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 1rem auto 0;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--purple);
+      border-bottom: 2px solid #dcd6f7;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li, .project-tile {
+      background-color: #f9eefc;
+      margin: 10px 0;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px var(--shadow);
+    }
+
+    .project-tile a {
+      text-decoration: none;
+      color: var(--purple);
+    }
+
+    #projects a {
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--accent);
+      border-top: 2px solid var(--highlight);
+    }
+
+    a#profile-link {
+      color: #6c63ff;
+      text-decoration: none;
+    }
+
+    /* Media Query */
+    @media (max-width: 600px) {
+      #navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="#welcome-section">Welcome</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="welcome-section">
+    <h1>Hawazin Azeenath Nisha A S</h1>
+    <p>
+      B.Tech Computer Science and Business Systems (CSBS) student with a dream of building a future in the fields I love. Certified in Responsive Web Design, Data Analysis with Python, and Machine Learning via FreeCodeCamp. I also enjoy quiz programs and paper presentations.
+    </p>
+  </header>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Machine Learning</li>
+      <li>HTML & CSS</li>
+      <li>Data Visualization</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-tile">
+      <strong>ML Project</strong> – Applied data analysis and model evaluation using real-world data.
+      <a href="#" target="_blank">Project Link (Coming Soon)</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p>3rd Year, B.Tech Computer Science and Business Systems (CSBS)</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>ML Intern at Nezuware</strong> – Aug 2024  
+      Implemented ML solutions and did EDA during a 1-month internship.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a id="profile-link" href="mailto:hawazinsafeek@gmail.com" target="_blank">hawazinsafeek@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Hawazin Azeenath Nisha A S — All rights reserved.
+  </footer>
+</body>
+</html>
